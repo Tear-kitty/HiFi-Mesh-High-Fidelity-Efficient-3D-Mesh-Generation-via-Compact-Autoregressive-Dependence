@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Environment
+.env
+*.log
+
+# Data
+data/
+dataset/
+datasets/
+
+# Outputs
+outputs/
+output/
+results/
+runs/
+wandb/
+logs/
+
+# Checkpoints / weights
+checkpoints/
+checkpoint/
+weights/
+pretrained/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pkl
+
+# Large array files
+*.npy
+*.npz
