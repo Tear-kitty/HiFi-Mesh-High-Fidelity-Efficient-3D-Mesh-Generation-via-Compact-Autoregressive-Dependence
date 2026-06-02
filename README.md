@@ -22,8 +22,6 @@ HiFi-Mesh is a high-fidelity and efficient autoregressive 3D mesh generation fra
 
 - **2026-03-14:** HiFi-Mesh was published in the Proceedings of the AAAI Conference on Artificial Intelligence.
 - **2026-01-29:** The arXiv preprint was released.
-- **TODO:** Add pretrained checkpoint links.
-- **TODO:** Add processed dataset links or detailed dataset split information.
 
 ## Project Structure
 
