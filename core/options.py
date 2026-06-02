@@ -78,8 +78,8 @@ class Options:
     save_checkpoint: bool = True
     checkpointing_epoch: int = 10
     seed: int = 42
-    resume: Optional[str] = '/home/lyf/HiFi-Mesh/workspace/checkpoint-0199'
-    start_epoch: int = 199
+    resume: Optional[str] = None
+    start_epoch: int = 0
     eval_every: int = checkpointing_epoch
     eval_batches: int = 1
     eval_batch:int = 1
