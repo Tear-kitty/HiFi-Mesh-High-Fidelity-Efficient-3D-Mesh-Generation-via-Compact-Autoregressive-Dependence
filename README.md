@@ -193,52 +193,6 @@ Example list format:
 ]
 ```
 
-Example dictionary format:
-
-```json
-{
-  "mesh_000001": "/absolute/path/to/mesh_000001.ply",
-  "mesh_000002": "/absolute/path/to/mesh_000002.ply"
-}
-```
-
-You can generate a path list with:
-
-```bash
-python - <<'PY'
-import json
-from pathlib import Path
-
-mesh_root = Path("/absolute/path/to/your/ply_folder").resolve()
-paths = sorted(str(p.resolve()) for p in mesh_root.rglob("*.ply"))
-
-Path("dataset").mkdir(exist_ok=True)
-with open("dataset/ply_paths.json", "w", encoding="utf-8") as f:
-    json.dump(paths, f, indent=2)
-
-print(f"Saved {len(paths)} mesh paths to dataset/ply_paths.json")
-PY
-```
-
-During loading, each mesh is normalized, tokenized, and split into segments. By default:
-
-```text
-num_segments = 10
-segment_boundary_token = 5
-max_seq_length = 200000
-max_segment_length = 25000
-point_num = 131072
-```
-
-The training target is segment-wise autoregressive prediction:
-
-```text
-input : [BOS, token_0, token_1, ..., token_n]
-label : [token_0, token_1, ..., token_n, EOS]
-```
-
-Each training sample contains one target segment. The segment index is sampled during training.
-
 ## Training
 
 Before training, make sure the GPU selection is controlled by your shell or job scheduler. For open-source use, avoid hard-coding a single GPU ID inside `main.py`.
