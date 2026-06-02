@@ -332,23 +332,6 @@ python infer.py \
 
 This is useful for checking whether the generated segment is geometrically compatible with the rest of the original mesh.
 
-### Output token file
-
-If `--output-tokens` ends with `.json`, the output is saved as:
-
-```json
-{
-  "segments": {
-    "0": [5, 123, 456, 2],
-    "1": [5, 789, 321, 2]
-  },
-  "combined_segment_indices": [0, 1],
-  "combined_tokens": [5, 123, 456, 5, 789, 321]
-}
-```
-
-If `--output-tokens` ends with `.npz`, each segment is saved as a separate NumPy array.
-
 ## Useful Arguments
 
 ### Training
@@ -402,10 +385,6 @@ Try reducing:
 ```
 
 For quick debugging, start with `--batch-size 1` and `--point-num 32768`.
-
-### Dataset path errors
-
-`ply_paths_json` should contain absolute paths. Relative paths are easy to break when launching training with `accelerate` or from a job scheduler.
 
 ## Acknowledgements
 
