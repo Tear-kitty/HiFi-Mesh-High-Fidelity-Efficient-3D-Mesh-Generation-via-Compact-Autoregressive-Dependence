@@ -146,11 +146,10 @@ class PlyMeshDataset(Dataset):
 
         rng = random.Random(opt.seed)
         rng.shuffle(paths)
-        split = 60
-        self.paths = paths[:split]
-        # split = int(round(len(paths) * opt.train_split))
-        # split = min(max(split, 1), len(paths))
-        # self.paths = paths[:split] if training else paths[split:]
+        
+        split = int(round(len(paths) * opt.train_split))
+        split = min(max(split, 1), len(paths))
+        self.paths = paths[:split] if training else paths[split:]
         if not self.paths:
             self.paths = paths[-min(len(paths), 1) :]
 
