@@ -25,16 +25,6 @@ HiFi-Mesh is a high-fidelity and efficient autoregressive 3D mesh generation fra
 - **TODO:** Add pretrained checkpoint links.
 - **TODO:** Add processed dataset links or detailed dataset split information.
 
-%## TODO
-
-%- [x] Release training code.
-%- [x] Release inference code.
-%- [x] Support segment-wise autoregressive inference.
-%- [x] Support batched multi-segment autoregressive inference.
-%- [ ] Release pretrained checkpoints.
-%- [ ] Release preprocessing scripts and dataset split files.
-%- [ ] Add example meshes and visualization assets.
-
 ## Project Structure
 
 ```text
