@@ -1,4 +1,4 @@
-# HiFi-Mesh: High-Fidelity-Efficient-3D-Mesh-Generation-via-Compact-Autoregressive-Dependence
+# HiFi-Mesh: High-Fidelity Efficient 3D Mesh Generation via Compact Autoregressive Dependence
 <p align="center">
   <a href="https://arxiv.org/abs/2601.21314"><img src="https://img.shields.io/badge/arXiv-2601.21314-b31b1b.svg" alt="arXiv"></a>
   <a href="https://doi.org/10.1609/aaai.v40i8.37586"><img src="https://img.shields.io/badge/AAAI-2026-blue.svg" alt="AAAI 2026"></a>
